@@ -1,0 +1,57 @@
+<%- include("./partials/header") %>
+
+    <%- include("./partials/navbar") %>
+        <br>
+        <br>
+        <br>
+        <div class="container mt-5">
+            <div class="card mt-3">
+                <div class="card-header">
+                    <h1> Transaction History</h1>
+                </div>
+                <div class="card-body">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Year</th>
+                                <th>Month</th>
+                                <th>Day</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <% transacoes.forEach((transacao) => { %>
+                                    <td>
+                                        <%= transacao.year %>
+                                    </td>
+                                    <td>
+                                        <%= transacao.month %>
+                                    </td>
+                                    <td>
+                                        <%= transacao.data %>
+                                    </td>
+                                    <td>
+                                        <%= transacao.type %>
+                                    </td>
+                                    <td>
+                                        <%= transacao.description %>
+                                    </td>
+                                    <td>
+                                        <%= transacao.value %>
+                                    </td>
+                                    <% }) %>
+                                        <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <%- include("./partials/footer") %>

@@ -1,0 +1,30 @@
+<%- include("./partials/header") %>
+
+    <%- include("./partials/navbar") %>
+
+        <div class="container mt-5">
+            <div class="card">
+                <div class="card-header">
+                    <h1>Login</h1>
+                </div>
+                <div class="card-body mt-3">
+                    <form action="/authenticate" method="POST">
+                        <label>Email</label>
+                        <input class="form-control" required type="email" name="email">
+                        <label>Password</label>
+                        <input class="form-control" required type="text" name="password">
+                        <br>
+                        <hr>
+                        <button type="submit" class="btn btn-primary">
+                            Login</button>
+                    </form>
+                </div>
+            </div>
+            <div class="card-body mt-1">
+                <h1 class="row mr-0"><a href="/register">Register</a></h1>
+
+            </div>
+        </div>
+
+
+        <%- include("./partials/footer") %>
